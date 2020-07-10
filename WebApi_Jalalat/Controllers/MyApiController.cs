@@ -22,13 +22,14 @@ namespace WebApi_Jalalat.Controllers
             P.Address = "KhaniAbad";
         }
 
-      
+        //اگر کلاینت با ایجکس بخواد ارتباط برقرار کنه باید آدرس کلاینت را در اینجا بنویسیم
+        [EnableCors(origins: "http://localhost:4220/", headers: "*", methods: "*")]
         [HttpGet]
         public Person GetPerson1()
         {
             return P;
         }
-        [EnableCors(origins: "http://localhost:4220/", headers: "*", methods: "*")]
+
         [HttpGet]
         public List<Person> GetPerson2()
         {
