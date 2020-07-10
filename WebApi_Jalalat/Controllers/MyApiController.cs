@@ -29,6 +29,7 @@ namespace WebApi_Jalalat.Controllers
         {
             return P;
         }
+        [EnableCors(origins: "http://localhost:4220/", headers: "*", methods: "*")]
         [HttpGet]
         public List<Person> GetPerson2()
         {
